@@ -1,0 +1,15 @@
+<html>
+<h1>Hello</h1>
+{% if request.user.is_authenticated %}
+signed in user: {{request.user}}
+
+<a href="/user/log-out">Sign out</a>
+
+{% else %}
+unauthed user <a href="/user/sign-up">Sign in</a>
+{% endif %}
+
+<br><br>
+See the <a href="/polls/">polls</a> to vote on
+
+</html>
